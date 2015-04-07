@@ -13,7 +13,6 @@ class VisaRule implements RuleContract
         
         //Check the card matches the Visa pattern
         if (substr($value, 0, 1) == "4") {
-            
             /* Luhn algorithm number checker - (c) 2005-2008 shaman - www.planzero.org *
             * This code has been released into the public domain, however please      *
             * give credit to the original author where possible.                      */
@@ -40,7 +39,7 @@ class VisaRule implements RuleContract
             }
 
             // If the total mod 10 equals 0, the number is valid
-            return ($total % 10 == 0) ? TRUE : FALSE;
+            return ($total % 10 == 0) ? true : false;
             
         }
         
